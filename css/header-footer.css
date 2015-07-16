@@ -1,6 +1,6 @@
 <style type="text/css">
 body {
-	margin:80px 80px 100px 100px;
+	margin: 80px 80px 100px 100px;
 }
 div#fixedheader {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
@@ -12,12 +12,12 @@ div#fixedheader {
 	background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	position:fixed;
-	top:0px;
-	left:0px;
-	width:100%;
-	color:#CCC;
-	padding:20px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	color: #CCC;
+	padding: 20px;
 }
 div#fixedfooter {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
@@ -29,16 +29,19 @@ div#fixedfooter {
 	background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	position:fixed;
-	bottom:0px;
-	left:0px;
-	width:100%;
-	color:#CCC;
-	padding:40px;
-}
-a#inicio{
 	position: fixed;
-	top:9%;
-	right: 12%;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: #CCC;
+	padding: 30px;
+	font-family: "Franklin Gothic Medium";
+}
+
+a#inicio {
+	position: fixed;
+	top: 9%;
+	right: 6%;
+	font-family: "Franklin Gothic Medium";
 }
 </style>
