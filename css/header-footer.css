@@ -3,7 +3,6 @@ body {
 	margin: 80px 80px 100px 100px;
 }
 div#fixedheader {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
 	background: #1e5799; /* Old browsers */
 	background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
@@ -17,10 +16,9 @@ div#fixedheader {
 	left: 0px;
 	width: 100%;
 	color: #CCC;
-	padding: 20px;
+	padding: 10px;
 }
 div#fixedfooter {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
 	background: #1e5799; /* Old browsers */
 	background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
@@ -34,14 +32,14 @@ div#fixedfooter {
 	left: 0px;
 	width: 100%;
 	color: #CCC;
-	padding: 30px;
+	padding: 15px;
 	font-family: "Franklin Gothic Medium";
 }
 
 a#inicio {
 	color: white;
 	position: fixed;
-	top: 9%;
+	top: 8%;
 	right: 6%;
 	font-family: "Franklin Gothic Medium";
 }
