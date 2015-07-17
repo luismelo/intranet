@@ -1,4 +1,5 @@
 <?php ?>
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/fonts/fonts.css" />
 <link rel="stylesheet" href="css/header-footer.css" />
 <body>
