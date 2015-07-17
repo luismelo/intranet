@@ -11,11 +11,17 @@
 		<title>Quadro de Avisos</title>
 	</head>
 	<body>
-	<div>
-	<a href="#"><button class="btn">Manuais e tutoriais</button></a>
-	</div>
-	<div>
-	<a href="#"><button class="btn2">Vídeos</button></a>
-	</div>	
+		<div>
+			<a href="#">
+			<button class="btn">
+				Manuais e tutoriais
+			</button></a>
+		</div>
+		<div>
+			<a href="#">
+			<button class="btn2">
+				Vídeos
+			</button></a>
+		</div>
 	</body>
 </html>
