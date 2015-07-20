@@ -1,5 +1,4 @@
 <?php
-
 /*
 Desenvolvido por: Vanessa Schissato
 Data: 12/12/2005
@@ -15,11 +14,16 @@ Calendario dinamico com navegacao pelos meses
 ?>
 
 <HTML>
-
+<link rel="stylesheet" type="text/css" href="/fonts/fonts.css" />
+<link rel="stylesheet" href="css/header-footer.css" />
 <HEAD>
 
 </HEAD>
-<BODY link=black vlink=black alink=black>
+<BODY link=black vlink=black alink=black style="width: 100%; height: 100%">
+	<div id="fixedheader">
+		<img border="0" src="http://logo.empregos.com.br/142914_G.jpg" />
+		<a id="inicio" href="index.php" style="text-decoration: none" style="position: static">Inicio</a>
+	</div>
 
 <?php
 
@@ -108,15 +112,18 @@ function calendario(){
 	$mes_post = date("m", mktime(0, 0, 0, $mes, $t_mes+1, $ano));  
 	$ano_post = date("Y", mktime(0, 0, 0, $mes, $t_mes+1, $ano));  
 
-	$retorno.="<center>";
+	$retorno.="<center style=\"position: absolute;
+	bottom: 70px;
+	left: 0px;
+	width: 100%;\">";
 
 	//titulo do calendario
-	$retorno.= "<font style=\"font-family:verdana,arial,serif;font-size:16\"><b>Calend&#225;rio: ".converte_mes($mes)."/".$ano."</b></font><br>";
+	$retorno.= "<font style=\"font-family:verdana,arial,serif;font-size:20\"><b>Calend&#225;rio: ".converte_mes($mes)."/".$ano."</b></font><br>";
 
 	//montagem do calendario
 	$retorno.= "<table><tr><td>&nbsp;</td><td>";
 
-	$retorno.= "<table border=1 width=580 cellpadding=5 cellspacing=5 style='border-collapse: collapse' id=AutoNumber1 bordercolor=#333333>";
+	$retorno.= "<table id='inner_calendar' border=1 width=100% cellpadding=5 cellspacing=5 style='border-collapse: collapse' id=AutoNumber1 bordercolor=#333333>";
 	//primeira linha do calendario
 	$retorno.= "<tr bgcolor=#B5B5B5 face=verdana,arial,serif>";
 	for($i=0;$i<7;$i++){
@@ -151,7 +158,7 @@ function calendario(){
 		  {
 			 If ($dia_semana == $cont_semana) //celulas de dias do mes
 			 {
-				$retorno.= "<td valign=top bgcolor=".$cor." width=110 height=70>";
+				$retorno.= "<td valign=top bgcolor=".$cor." width=150 height=55>";
 				$retorno.= "<font face=verdana,arial,serif size=2><b>".$cont_mes."</b>";
 
 				/************************************************************/
@@ -328,5 +335,9 @@ Function converte_mes($mes)
 ?>
 
 </BODY>
-
+<div id="fixedfooter">
+		<p>
+			Núcleo de Desenvolvimento Institucional
+		</p>
+	</div>
 </HTML>

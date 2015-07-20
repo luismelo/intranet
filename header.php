@@ -5,9 +5,9 @@
 <body>
 	<div id="fixedheader">
 		<img border="0" src="http://logo.empregos.com.br/142914_G.jpg" />
-		<a id="inicio" href="index.php" style="text-decoration: none" >Inicio</a>
+		<a id="inicio" href="index.php" style="text-decoration: none" style="position: fixed">Inicio</a>
 	</div>
-
+	
 	<div id="fixedfooter">
 		<p>
 			Núcleo de Desenvolvimento Institucional
