@@ -11,7 +11,7 @@ get_header();
 <div id="primary" class="site-content" style="width:100%";>
     <div id="content" role="main" class="news-cpt widecolumn">
 
-    <span class="back"><a href="http://localhost/intranet/news/"><?php _e('&laquo; Voltar para notícias'); ?></a></span>
+    <span class="back"><a href="http://localhost/intranet/news/"><?php _e('&laquo; Voltar para avisos'); ?></a></span>
     
     <?php if( have_posts() ) : ?><?php while( have_posts() ) : the_post(); ?>
       

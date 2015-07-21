@@ -14,13 +14,13 @@ get_header();
     <div class="archive-header">
 				<h1 class="archive-title"><?php
 					if ( is_day() ) :
-						printf( __( 'Daily News Archives: %s' ), '<span>' . get_the_date() . '</span>' );
+						printf( __( 'Notícias por dia: %s' ), '<span>' . get_the_date() . '</span>' );
 					elseif ( is_month() ) :
-						printf( __( 'Monthly News Archives: %s' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>' );
+						printf( __( 'Notícias por mês: %s' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>' );
 					elseif ( is_year() ) :
-						printf( __( 'Yearly News Archives: %s' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwelve' ) ) . '</span>' );
+						printf( __( 'Notícias por ano: %s' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwelve' ) ) . '</span>' );
 					else :
-						_e( 'News' );
+						_e( 'Avisos' );
 					endif;
 				?></h1>
     </div> <!-- .archive-header -->
@@ -38,7 +38,7 @@ get_header();
                     the_post_thumbnail();
                   }
                   ?>
-                  <div class="summary"><?php the_excerpt(); ?> <a class="moretag" href="<?php the_permalink() ?>"> Read the full news article</a></div>
+                  <div class="summary"><?php the_excerpt(); ?> <a class="moretag" href="<?php the_permalink() ?>"> Leia todo o artigo.</a></div>
           </div>
           <?php edit_post_link(__('Edit'), '<span class="edit-link">', '</span>'); ?>
       </div><!-- post -->
@@ -52,7 +52,7 @@ get_header();
     
     <?php else: ?>
     
-      <p>There are no news items to display.</p>
+      <p>Não há notícias na sua busca.</p>
 
     <?php endif; ?>
     
