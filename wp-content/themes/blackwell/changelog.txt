@@ -1,0 +1,38 @@
+== Changelog ==
+
+= Theme Name: BlackWell 
+
+= Version: 1.0.7
+	unminifed version of jquery.singlePageNavm script added
+
+= Version: 1.0.6
+	More Strings are translated and sanitised.
+
+= Version: 1.0.5
+	Theme Options and admin interface strings internationalized 
+	blackwell_add_stylesheet() function hooked with wp_enqueue_script
+
+= Version: 1.0.4
+	tiny mce script removed.
+	dynamic_script.php removed.
+
+= Version: 1.0.3 =
+   Theme textdomain added style header.
+   wp_enqueue_script('jquery') Removed.
+   Used sane default for option panal.
+   Some Unused Code Removed From Function.
+   Theme Style Updated.
+
+= Version: 1.0.2 =
+Theme Uri Link Change 
+	
+= Version: 1.0.1 =
+	ddsmooth menu updated to superfish menu. 
+	blog template removed.
+	all js and css file license add in readme file.
+	theme design improve.
+
+= Version: 1.0.0 =
+** BlackWell Theme is created on 01/07/2014.
+
+

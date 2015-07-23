@@ -1,0 +1,469 @@
+# Copyright (C) 2014 BlackWell Theme Pro
+# This file is distributed under the same license as the WordPress package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BlackWell Pro Theme Pro 1.0\n"
+"Report-Msgid-Bugs-To: admin@inkthemes.com"
+"POT-Creation-Date: 2014-07-01 12:47:23+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Inkthemes\n"
+
+#: define_template.php:2
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: define_template.php:3
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr ""
+
+#: define_template.php:4
+msgid "Most Used Categories"
+msgstr ""
+
+#: define_template.php:5
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: define_template.php:6
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: define_template.php:7
+msgid "Nothing Found here"
+msgstr ""
+
+#: define_template.php:8
+msgid "Sorry, but nothing matched your search criteria."
+msgstr ""
+
+#: define_template.php:9
+msgid "Categories"
+msgstr ""
+
+#: define_template.php:10
+msgid "Archives"
+msgstr ""
+
+#: define_template.php:11
+msgid "Blog Archives"
+msgstr ""
+
+#: define_template.php:12
+msgid "Category Archives: %s"
+msgstr ""
+
+#: define_template.php:13
+msgid "Page %s"
+msgstr ""
+
+#: define_template.php:14
+msgid "Search Results for: %s"
+msgstr ""
+
+#: define_template.php:15
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: define_template.php:16
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: define_template.php:17
+msgid "Location Map"
+msgstr ""
+
+#: define_template.php:18
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: define_template.php:19
+msgid "Author Archives: %s"
+msgstr ""
+
+#: define_template.php:20
+msgid "About: %s"
+msgstr ""
+
+#: define_template.php:21
+msgid "Home"
+msgstr ""
+
+#: define_template.php:22
+msgid "This entry was posted in %1$s"
+msgstr ""
+
+#: define_template.php:23
+msgid "permalink"
+msgstr ""
+
+#: define_template.php:24
+msgid "Bookmark the"
+msgstr ""
+
+#: define_template.php:25
+msgid "Primary Widget Area"
+msgstr ""
+
+#: define_template.php:26
+msgid "The primary widget area"
+msgstr ""
+
+#: define_template.php:27
+msgid "Secondary Widget Area"
+msgstr ""
+
+#: define_template.php:28
+msgid "The secondary widget area"
+msgstr ""
+
+#: define_template.php:29
+msgid "Submit Comment"
+msgstr ""
+
+#: define_template.php:30
+msgid "Leave a Comment"
+msgstr ""
+
+#: define_template.php:31
+msgid "&larr; Older posts"
+msgstr ""
+
+#: define_template.php:32
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: define_template.php:33
+msgid "&larr; Previous Post"
+msgstr ""
+
+#: define_template.php:34
+msgid "Next Post &rarr;"
+msgstr ""
+
+#: define_template.php:35
+msgid "Read More"
+msgstr ""
+
+#: define_template.php:36
+msgid "Send Your Message"
+msgstr ""
+
+#: define_template.php:37
+msgid "Return to %s"
+msgstr ""
+
+#: define_template.php:38
+msgid "By %2$s"
+msgstr ""
+
+#: define_template.php:39
+msgid "View all posts by %s"
+msgstr ""
+
+#: define_template.php:40
+msgid "Published %2$s"
+msgstr ""
+
+#: define_template.php:41
+msgid "Full size is %s pixels"
+msgstr ""
+
+#: define_template.php:42
+msgid "Link to full-size image"
+msgstr ""
+
+#: define_template.php:43
+msgid "Edit"
+msgstr ""
+
+#: define_template.php:44
+msgid "Continue reading &rarr;"
+msgstr ""
+
+#: define_template.php:45
+msgid "Pages:"
+msgstr ""
+
+#: define_template.php:46
+msgid "Continue Reading..."
+msgstr ""
+
+#: define_template.php:47
+msgid "Posted by"
+msgstr ""
+
+#: define_template.php:48
+msgid "and tagged"
+msgstr ""
+
+#: define_template.php:49
+msgid "Submit Message"
+msgstr ""
+
+#: define_template.php:50
+msgid "Your Name"
+msgstr ""
+
+#: define_template.php:51
+msgid "Your Email"
+msgstr ""
+
+#: define_template.php:52
+msgid "Your Message"
+msgstr ""
+
+#: define_template.php:53
+msgid "Search"
+msgstr ""
+
+#: define_template.php:54
+msgid "Comments are closed."
+msgstr ""
+
+#: define_template.php:55
+msgid "No Comments"
+msgstr ""
+
+#: define_template.php:56
+msgid "One Comments"
+msgstr ""
+
+#: define_template.php:57
+msgid "% Comments"
+msgstr ""
+
+#: define_template.php:58
+msgid "Post Tag With :"
+msgstr ""
+
+#: define_template.php:59
+msgid "Subject"
+msgstr ""
+
+#: define_template.php:60
+msgid "Send Message"
+msgstr ""
+
+#: define_template.php:61
+msgid "Main Menu"
+msgstr ""
+
+#: define_template.php:62
+msgid "Front Menu"
+msgstr ""
+
+#: define_template.php:63
+msgid "General Settings"
+msgstr ""
+
+#: define_template.php:64
+msgid "Custom Favicon"
+msgstr ""
+
+#: define_template.php:65
+msgid "Here you can upload a Favicon for your Website. Specified size is 16px x 16px."
+msgstr ""
+
+#: define_template.php:66
+msgid "Blog Post Read More Text"
+msgstr ""
+
+#: define_template.php:67
+msgid "Mention the text for blog post read more button"
+msgstr ""
+
+#: define_template.php:68
+msgid "Home Page Top Settings"
+msgstr ""
+
+#: define_template.php:69
+msgid "Home Page Top Image"
+msgstr ""
+
+#: define_template.php:70
+msgid "The optimal size of the image is 1600px wide x 900px height, but it can be varied as per your requirement."
+msgstr ""
+
+#: define_template.php:71
+msgid "Home Page Top Heading"
+msgstr ""
+
+#: define_template.php:72
+msgid "Mention the heading for the Top Image"
+msgstr ""
+
+#: define_template.php:73
+msgid "Link for Home Page Top Image"
+msgstr ""
+
+#: define_template.php:74
+msgid "Mention the URL for top image."
+msgstr ""
+
+#: define_template.php:75
+msgid "Home Page Top Description"
+msgstr ""
+
+#: define_template.php:76
+msgid "Mention the Description for home page top area."
+msgstr ""
+
+#: define_template.php:77
+msgid "Three Column Feature Setting"
+msgstr ""
+
+#: define_template.php:78
+msgid "Home Page Three Column Feature Heading"
+msgstr ""
+
+#: define_template.php:79
+msgid "Mention the heading for your three column feature area on home page."
+msgstr ""
+
+#: define_template.php:80
+msgid "Home Page Three Column Feature Description"
+msgstr ""
+
+#: define_template.php:81
+msgid "Mention the description for your three column feature area on home page."
+msgstr ""
+
+#: define_template.php:82
+msgid "First Block"
+msgstr ""
+
+#: define_template.php:83
+msgid "First Font Icon"
+msgstr ""
+
+#: define_template.php:84
+msgid "Enter the  CSS class fa-cloud  of the icons you want to use on your first column feature. Font Awesome gives you scalable vector icons that can instantly be customized. You can find a list of icon classes here :fortawesome.github.io/Font-Awesome/icons e.g fa-book"
+msgstr ""
+
+#: define_template.php:85
+msgid "First Feature Heading"
+msgstr ""
+
+#: define_template.php:86
+msgid "Mention the heading for first column that will showcase your business services."
+msgstr ""
+
+#: define_template.php:87
+msgid "First Feature Heading Link"
+msgstr ""
+
+#: define_template.php:88
+msgid "Mention the first URL here to redirect the user to any page you want."
+msgstr ""
+
+#: define_template.php:89
+msgid "First Feature Description"
+msgstr ""
+
+#: define_template.php:90
+msgid "Write short description for your first heading."
+msgstr ""
+
+#: define_template.php:91
+msgid "Second Block"
+msgstr ""
+
+#: define_template.php:92
+msgid "Second Font Icon"
+msgstr ""
+
+#: define_template.php:93
+msgid "Enter the  CSS class fa-cloud  of the icons you want to use on your second column feature. Font Awesome gives you scalable vector icons that can instantly be customized. You can find a list of icon classes here :fortawesome.github.io/Font-Awesome/icons e.g fa-book"
+msgstr ""
+
+#: define_template.php:94
+msgid "Second Feature Heading"
+msgstr ""
+
+#: define_template.php:95
+msgid "Mention the heading for second column that will showcase your business services."
+msgstr ""
+
+#: define_template.php:96
+msgid "Second feature Link"
+msgstr ""
+
+#: define_template.php:97
+msgid "Mention the second URL here to redirect the user to any page you want."
+msgstr ""
+
+#: define_template.php:98
+msgid "second Feature Description"
+msgstr ""
+
+#: define_template.php:99
+msgid "Write short description for your second heading."
+msgstr ""
+
+#: define_template.php:100
+msgid "Third block"
+msgstr ""
+
+#: define_template.php:101
+msgid "Third Font Icon"
+msgstr ""
+
+#: define_template.php:102
+msgid "Enter the  CSS class fa-cloud  of the icons you want to use on your third column feature. Font Awesome gives you scalable vector icons that can instantly be customized. You can find a list of icon classes here :fortawesome.github.io/Font-Awesome/icons e.g fa-book"
+msgstr ""
+
+#: define_template.php:103
+msgid "Third Feature Heading"
+msgstr ""
+
+#: define_template.php:104
+msgid "Mention the heading for third column that will showcase your business services."
+msgstr ""
+
+#: define_template.php:105
+msgid "Link for Title Third Feature"
+msgstr ""
+
+#: define_template.php:106
+msgid "Mention the Third URL here to redirect the user to any page you want."
+msgstr ""
+
+#: define_template.php:107
+msgid "Third Feature Description"
+msgstr ""
+
+#: define_template.php:108
+msgid "Write short description for your third heading."
+msgstr ""
+
+#: define_template.php:109
+msgid "Home Page Blog Setting"
+msgstr ""
+
+#: define_template.php:110
+msgid "Home Page Blog Feature Heading"
+msgstr ""
+
+#: define_template.php:111
+msgid "Mention the heading for your blog feature area on home page."
+msgstr ""
+
+#: define_template.php:112
+msgid "Home Page Blog Feature Description"
+msgstr ""
+
+#: define_template.php:113
+msgid "Mention the description for your blog feature area on home page."
+msgstr ""
+
+#: define_template.php:114
+msgid "Theme Options"
+msgstr ""
+
+#: define_template.php:115
+msgid "so far."
+msgstr ""
