@@ -348,6 +348,7 @@ body > div, body .container.device,  body nav  , #wrapper{
 
 #header-wrapper {
 	overflow: hidden;
+	height:100%
 }
 
 #header {

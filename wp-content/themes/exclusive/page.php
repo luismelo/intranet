@@ -18,14 +18,14 @@ exclusive_update_page_layout_meta_settings();
 		<?php } ?>
 		<div id="blog" class="blog" >		
 				<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-					  <div class="single-post single-page">
+					 <div class="single-post single-page">
 						 
 							<a href="<?php the_permalink(); ?>">
 								<h3><?php the_title(); ?></h3>
 							</a>
 						 
 						<?php the_content();  ?>
-					 </div>				
+					 </div> 				
 			    <?php endwhile; ?>
 			   <div class="navigation">
 					<?php posts_nav_link(); ?>
