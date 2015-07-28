@@ -3,7 +3,7 @@
  * Plugin Name: l7 Login Customizer
  * Plugin URI: layer7web.com
  * Description: For customizing the login, logout, and register pages. Add a custom logo and background image easily. 
- * Version: 2.0.8
+ * Version: 2.0.9
  * Author: Jeff Mattson
  * Author URI: https://github.com/jeffreysmattson
  * License: GPLv2 or later
@@ -46,7 +46,7 @@ if ( ! class_exists( 'JsmGenericClass' )  ) {
 			add_action( 'login_head', array( $this, 'jsm_my_login_head' ) );
 			add_filter( 'login_headerurl', array( $this, 'jsm_my_login_logo_url' ), 15 );
 			add_filter( 'login_headertitle', array( $this, 'my_login_logo_url_title' ), 15 );
-			add_action( 'admin_enqueue_scripts', array( $this, 'jsm_custom_login_options_enqueue_scripts' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'jsm_custom_login_options_enqueue_scripts' ), 15 );
 
 			$plugin = plugin_basename( __FILE__ );
 			add_filter( "plugin_action_links_$plugin", array( $this, 'jsm_custom_login_settings_link') );
@@ -90,10 +90,10 @@ if ( ! class_exists( 'JsmGenericClass' )  ) {
 				wp_enqueue_script( 'bootstrap-color' );
 			}
 
-			// For Font Awesome on Settings page
-			wp_register_style( 'jsm-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+			// For Font Awesome, Bootstrap on Settings page
+			wp_register_style( 'jsm-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 			wp_register_style( 'jsm-main-css' , plugins_url( 'assets/css/jsm-main.css', __FILE__ ) );
-			wp_register_style( 'bootstrap-css' , 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
+			wp_register_style( 'bootstrap-css' , plugins_url( 'assets/css/bootstrap.css', __FILE__ ) );
 			wp_register_style( 'bootstrap-color', plugins_url( 'assets/dist/css/bootstrap-colorpicker.css', __FILE__ ) );
 			if ( $settings_page_url == get_current_screen() -> id ) {
 				wp_enqueue_style( 'jsm-font-awesome' );
@@ -196,8 +196,8 @@ if ( ! class_exists( 'JsmGenericClass' )  ) {
 			 * This is the form that is on top of the larger id of #login.  When the color of
 			 * the #login is chosen the these should be set to transparent.
 			 */
-			if( '' == $options['form_background'] ){
-			
+			if ( '' == $options['form_background'] ){
+
 				// Small Login Form Background set to white large set to transparent
 				$css_content['login_form'] = '#login {background:transparent;}';
 				$css_content['small_login_form'] = '.login form {background:#fff;}';
@@ -220,18 +220,14 @@ if ( ! class_exists( 'JsmGenericClass' )  ) {
 			<style>
 				<?php
 				foreach ( $css_content as $css ){
-					echo esc_html( $css );
+					echo esc_html($css);
 				}
 				?> 
 			</style>
 			<?php
 			$content .= ob_get_contents();
 			ob_end_clean();
-
-			$allowed = array(
-						'style' => array(),
-						);
-			echo wp_kses( $content, $allowed );
+			echo $content;
 		}
 
 		/**

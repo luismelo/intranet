@@ -1,0 +1,92 @@
+.archive-header,
+.loop-pagination {
+  padding: $baseline-height $column-27 * 2;
+  margin-bottom: $baseline-height;
+  background: white;
+  text-align: center;
+
+  h2 {
+    @extend %twenty-one-pixels;
+    display: inline-block;
+    margin-left: 6px;
+  }
+}
+.loop-pagination {
+  position: relative;
+  margin: $baseline-height 0;
+
+  a,
+  span {
+    margin: 0 4px;
+  }
+  .next {
+    position: absolute;
+    right: $column-27 * 2;
+  }
+  .prev {
+    position: absolute;
+    left: $column-27 * 2;
+  }
+}
+.sticky-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  padding: 6px 20px;
+  background: $color-gray-17-blue;
+  color: white;
+}
+
+// 1150px
+@media all and (max-width: $eleven-fifty) {
+
+  .blog .sticky:not(.has-post-thumbnail) article {
+    padding-top: $baseline-height * 2;
+  }
+}
+
+// 550px
+@media all and (min-width: $five-fifty) {
+
+  .archive-header,
+  .loop-pagination  {
+    box-shadow: $box-shadow;
+  }
+}
+
+// 950px
+@media all and (min-width: $nine-fifty) {
+
+  .archive-header,
+  .loop-pagination  {
+    padding: $baseline-height $column-9 * 0.75 * 1.636;
+  }
+  .loop-pagination {
+
+    .next {
+      right: $column-9 * 0.75 * 1.636;
+    }
+    .prev {
+      left: $column-9 * 0.75 * 1.636;
+    }
+  }
+}
+
+// 1150px
+@media all and (min-width: $eleven-fifty) {
+
+  .archive-header,
+  .loop-pagination  {
+    padding: $baseline-height $column-9 * 0.5 * 1.8;
+  }
+  .loop-pagination {
+
+    .next {
+      right: $column-9 * 0.5 * 1.8;
+    }
+    .prev {
+      left: $column-9 * 0.5 * 1.8;
+    }
+  }
+}

@@ -26,23 +26,32 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_admin_init(){
 		global $pagenow;
 		register_setting( 'jsm_custom_login_options', 'jsm_custom_login_options', array( $this, 'jsm_custom_logo_sanitization' ) );
-		add_settings_section( 'jsm_custom_login_main', 'L7 Login Customizer', array( $this, 'jsm_custom_login_section_text' ), 'simple-login-customizer' );
-		add_settings_field( 'jsm_custom_logo_upload_options',  '<i class="fa fa-upload"></i> Logo Upload', array( $this, 'jsm_custom_login_logo_upload' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'text_string' ) );
-		add_settings_field( 'jsm_custom_logo_size',  '<i class="fa fa-arrows-alt"></i> Set Logo Size', array( $this, 'jsm_custom_login_logo_size' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'logo_size' ) );
-		add_settings_field( 'jsm_custom_login_logo_preview', '<i class="fa fa-picture-o"></i> Logo Preview', array( $this, 'jsm_custom_login_setting_logo_preview' ), 'simple-login-customizer', 'jsm_custom_login_main' );
-		add_settings_field( 'jsm_custom_login_logo_link_url', '<i class="fa fa-link"></i> Logo Link URL', array( $this, 'jsm_custom_login_setting_link_url' ) , 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'link_url' ) );
-		add_settings_field( 'jsm_custom_login_logo_hover_title', '<i class="fa fa-globe"></i> Logo Image Title', array( $this, 'jsm_custom_login_setting_hover_title' ) , 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'hover_title' ) );
+		
+		// Logo Settings
+		add_settings_section( 'jsm_custom_login_logo', 'Logo Settings', array( $this, 'jsm_custom_login_section_logo' ), 'logo-settings-customizer' );
+		add_settings_field( 'jsm_custom_logo_upload_options',  '<i class="fa fa-upload"></i> Logo Upload', array( $this, 'jsm_custom_login_logo_upload' ), 'logo-settings-customizer', 'jsm_custom_login_logo', array( 'label_for' => 'text_string' ) );
+		add_settings_field( 'jsm_custom_logo_size',  '<i class="fa fa-arrows-alt"></i> Set Logo Size', array( $this, 'jsm_custom_login_logo_size' ), 'logo-settings-customizer', 'jsm_custom_login_logo', array( 'label_for' => 'logo_size' ) );
+		add_settings_field( 'jsm_custom_login_logo_preview', '<i class="fa fa-picture-o"></i> Logo Preview', array( $this, 'jsm_custom_login_setting_logo_preview' ), 'logo-settings-customizer', 'jsm_custom_login_logo' );
+		add_settings_field( 'jsm_custom_login_logo_link_url', '<i class="fa fa-link"></i> Logo Link URL', array( $this, 'jsm_custom_login_setting_link_url' ) , 'logo-settings-customizer', 'jsm_custom_login_logo', array( 'label_for' => 'link_url' ) );
+		add_settings_field( 'jsm_custom_login_logo_hover_title', '<i class="fa fa-globe"></i> Logo Image Title', array( $this, 'jsm_custom_login_setting_hover_title' ) , 'logo-settings-customizer', 'jsm_custom_login_logo', array( 'label_for' => 'hover_title' ) );
 		add_settings_field( 'jsm_custom_login_logo_bk_color', '<i class="fa fa-paint-brush"></i> Page&#8217;s Background Color', array( $this, 'jsm_custom_login_setting_bk_color' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'bk_color' ) );
+
+		// Page Settings
+		add_settings_section( 'jsm_custom_login_main', 'Page Settings', array( $this, 'jsm_custom_login_section_page' ), 'simple-login-customizer' );
 		add_settings_field( 'jsm_custom_login_form', '<i class="fa fa-paint-brush"></i> Form&#8217;s Background Color', array( $this, 'jsm_custom_login_forms_background' ) , 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'form_background' ) );
 		add_settings_field( 'jsm_custom_login_small_form', '<i class="fa fa-paint-brush"></i> Small Form&#8217;s Background Color', array( $this, 'jsm_custom_login_small_forms_background' ) , 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'small_form_background' ) );
 		add_settings_field( 'jsm_custom_login_logo_bk_image', '<i class="fa fa-upload"></i> Background Image', array( $this, 'jsm_custom_login_setting_bk_image' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'bk_image' ) );
 		add_settings_field( 'jsm_custom_login_bk_image_preview', '<i class="fa fa-picture-o"></i> Background Image Preview', array( $this, 'jsm_custom_login_setting_bk_image_preview' ), 'simple-login-customizer', 'jsm_custom_login_main' );
-		add_settings_field( 'jsm_custom_login_logo_text_color', '<i class="fa fa-paint-brush"></i> Text Color', array( $this, 'jsm_custom_login_setting_text_color' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'text_color' ) );
-		add_settings_field( 'jsm_custom_login_logo_link_text_color', '<i class="fa fa-paint-brush"></i> Link Text Color', array( $this, 'jsm_custom_login_setting_link_text_color' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'link_text_color' ) );
-		add_settings_field( 'jsm_custom_login_logo_link_text_hover_color', '<i class="fa fa-paint-brush"></i> Link Text Hover Color', array( $this, 'jsm_custom_login_setting_link_text_hover_color' ), 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'link_text_hover_color' ) );
 
-		add_settings_field( 'jsm_custom_login_css', '<i class="fa fa-css3"></i> Custom CSS', array( $this, 'jsm_custom_login_setting_css_input' ) , 'simple-login-customizer', 'jsm_custom_login_main', array( 'label_for' => 'text_area' ) );
+		// Text Settings
+		add_settings_section( 'jsm_custom_login_text', 'Text Settings', array( $this, 'jsm_custom_login_section_text' ), 'text-settings-customizer' );	
+		add_settings_field( 'jsm_custom_login_logo_text_color', '<i class="fa fa-paint-brush"></i> Text Color', array( $this, 'jsm_custom_login_setting_text_color' ), 'text-settings-customizer', 'jsm_custom_login_text', array( 'label_for' => 'text_color' ) );
+		add_settings_field( 'jsm_custom_login_logo_link_text_color', '<i class="fa fa-paint-brush"></i> Link Text Color', array( $this, 'jsm_custom_login_setting_link_text_color' ), 'text-settings-customizer', 'jsm_custom_login_text', array( 'label_for' => 'link_text_color' ) );
+		add_settings_field( 'jsm_custom_login_logo_link_text_hover_color', '<i class="fa fa-paint-brush"></i> Link Text Hover Color', array( $this, 'jsm_custom_login_setting_link_text_hover_color' ), 'text-settings-customizer', 'jsm_custom_login_text', array( 'label_for' => 'link_text_hover_color' ) );
 
+		// Css Settings
+		add_settings_section( 'jsm_custom_login_css', 'CSS Settings', array( $this, 'jsm_custom_login_section_text' ), 'css-settings-customizer' );	
+		add_settings_field( 'jsm_custom_login_css', '<i class="fa fa-css3"></i> Custom CSS', array( $this, 'jsm_custom_login_setting_css_input' ) , 'css-settings-customizer', 'jsm_custom_login_css', array( 'label_for' => 'text_area' ) );
 
 		// Replace text in logo upload.
 		if ( 'media-upload.php' == $pagenow || 'async-upload.php' == $pagenow ) {
@@ -55,8 +64,23 @@ class Jsm_Custom_Login_Functions {
 	 * of the settings section jsm_custom_login_main
 	 * @return html
 	 */
+	public function jsm_custom_login_section_page() {
+	}
+
+	/**
+	 * Explanations about the logo settings. Simple text description
+	 * of the settings section.
+	 * @return html
+	 */
+	public function jsm_custom_login_section_logo() {
+	}
+
+	/**
+	 * Explanations about the text settings. Simple text description
+	 * of the settings section.
+	 * @return html
+	 */
 	public function jsm_custom_login_section_text() {
-		echo '<p>Change settings here to customize the login, logout, and registration pages.</p>';
 	}
 
 	/**
@@ -67,11 +91,11 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_logo_upload(){
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'text_string' );
-        $content = "<div class='input-group' style='width:40%;'>
+        $content = "<div class='input-group'>
         				<span class='input-group-btn'>
         					<button class='btn btn-info' id='upload_logo_button' type='button'>Select</button>
         				</span>
-        				<input id='text_string' name='jsm_custom_login_options[text_string]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' placeholder='Logo url here or click select' />
+        				<input id='text_string' name='jsm_custom_login_options[text_string]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' placeholder='Logo url here or click select' style='width:150%;'/>
         			</div>";
         $content .= "<span class='description'>Upload or choose an image for the logo.</span>";
 	 	echo $content;
@@ -84,7 +108,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_logo_size() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$logo_height = $this->jsm_custom_login_isset( $options, 'logo_height' );	
-	    $content = "<div class='input-group' style='width:40%;'><span class='input-group-addon'><i>Height</i></span><input id='logo_height' name='jsm_custom_login_options[logo_height]' type='text' value='" . esc_attr( $logo_height ) . "' class='form-control' /></div>";
+	    $content = "<div class='input-group'><span class='input-group-addon'><i>Height</i></span><input id='logo_height' name='jsm_custom_login_options[logo_height]' type='text' value='" . esc_attr( $logo_height ) . "' class='form-control' /></div>";
 	    $content .= "<span class='description'>Example: 100px</span>";
 	    echo $content;
 	}
@@ -112,27 +136,9 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_setting_link_url() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'link_url' );
-		$content = "<div class='input-group' style='width:40%;'><input id='link_url' name='jsm_custom_login_options[link_url]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' /></div>";
+		$content = "<div class='input-group'><span class='input-group-addon'><i></i></span><input id='link_url' name='jsm_custom_login_options[link_url]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' style='width:150%;' /></div>";
 		$content .= '<span class="description">http://example.com</span>';
-		$allowed = array(
-						'input' => array(
-							'id' => array(),
-							'name' => array(),
-							'type' => array(),
-							'value' => array(),
-							'style' => array(),
-							'class' => array(),
-						),
-						'span' => array(
-							'class' => array()
-						),
-						'br' => array(),
-						'div' => array(
-							'class' => array(),
-							 'style' => array()
-						),
-					);
-		echo wp_kses( $content, $allowed );
+		echo $content;
 	}
 
 	/**
@@ -143,7 +149,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_setting_hover_title() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'hover_title' );
-		$output = "<div class='input-group' style='width:40%;'><input id='hover_title' name='jsm_custom_login_options[hover_title]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' /></div>";
+		$output = "<div class='input-group'><span class='input-group-addon'><i></i></span><input id='hover_title' name='jsm_custom_login_options[hover_title]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' style='width:150%;'/></div>";
 		echo $output;
 	}
 
@@ -154,7 +160,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_setting_bk_color() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'bk_color' );
-		$output = "<div class='input-group color-picker' style='width:40%;'><input id='bk_color' name='jsm_custom_login_options[bk_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /><span class='input-group-addon'><i></i></span></div>";
+		$output = "<div class='input-group color-picker'><span class='input-group-addon'><i></i></span><input id='bk_color' name='jsm_custom_login_options[bk_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /></div>";
 		$output .= "<span class='description'>6 digit hex color code</span>";
 		echo $output;
 	}
@@ -168,7 +174,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_forms_background() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'form_background' );
-		$output = "<div class='input-group color-picker' style='width:40%;'><input id='form_background' name='jsm_custom_login_options[form_background]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /><span class='input-group-addon'><i></i></span></div>";
+		$output = "<div class='input-group color-picker'><span class='input-group-addon'><i></i></span><input id='form_background' name='jsm_custom_login_options[form_background]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /></div>";
 		$output .= "<span class='description'>6 digit hex color code</span>";
 		echo $output;
 	}
@@ -182,7 +188,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_small_forms_background() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'small_form_background' );
-		$output = "<div class='input-group color-picker' style='width:40%;'><input id='small_form_background' name='jsm_custom_login_options[small_form_background]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /><span class='input-group-addon'><i></i></span></div>";
+		$output = "<div class='input-group color-picker'><span class='input-group-addon'><i></i></span><input id='small_form_background' name='jsm_custom_login_options[small_form_background]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /></div>";
 		$output .= "<span class='description'>6 digit hex color code</span>";
 		echo $output;
 	}
@@ -195,13 +201,13 @@ class Jsm_Custom_Login_Functions {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'bk_image' );
 		$this->jsm_custom_login_isset( $options, 'image_pos' );
-		$content = "<div class='input-group' style='width:40%;'>
+		$content = "<div class='input-group'>
         				<span class='input-group-btn'>
         					<button class='btn btn-info' id='upload_bk_image_button' type='button'>Select</button>
         				</span>
-        				<input id='bk_image' name='jsm_custom_login_options[bk_image]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' placeholder='Image url here or click select.' />
+        				<input id='bk_image' name='jsm_custom_login_options[bk_image]' type='text' value='" . esc_attr( $text_string ) . "' class='form-control' placeholder='Image url here or click select.' style='width:150%;'/>
 					</div>
-					<div name='jsm_custom_login_options[image_pos]' class='input-group' style='width:40%;'>	
+					<div name='jsm_custom_login_options[image_pos]' class='input-group'>	
 						<select class='form-control' id='image_pos' name='jsm_custom_login_options[image_pos]'>
 						  <option value='repeat' ";
 		$content .= ( $options['image_pos'] == 'repeat' ) ? 'selected' : '';
@@ -235,7 +241,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_setting_text_color() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'text_color' );
-		$output = "<div class='input-group color-picker' style='width:40%;'><input id='text_color' name='jsm_custom_login_options[text_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /><span class='input-group-addon'><i></i></span></div>";
+		$output = "<div class='input-group color-picker'><span class='input-group-addon'><i></i></span><input id='text_color' name='jsm_custom_login_options[text_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /></div>";
 		$output .= "<span class='description'>6 digit hex color code</span>";
 		echo $output;
 	}
@@ -247,7 +253,7 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_setting_link_text_color() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'link_text_color' );
-		$output = "<div class='input-group color-picker' style='width:40%;'><input id='link_text_color' name='jsm_custom_login_options[link_text_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /><span class='input-group-addon'><i></i></span></div>";
+		$output = "<div class='input-group color-picker'><span class='input-group-addon'><i></i></span><input id='link_text_color' name='jsm_custom_login_options[link_text_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /></div>";
 		$output .= "<span class='description'>6 digit hex color code</span>";
 		echo $output;
 	}
@@ -259,8 +265,8 @@ class Jsm_Custom_Login_Functions {
 	public function jsm_custom_login_setting_link_text_hover_color() {
 		$options = get_option( 'jsm_custom_login_options' );
 		$text_string = $this->jsm_custom_login_isset( $options, 'link_text_hover_color' );
-		$output = "<div class='input-group color-picker' style='width:40%;'><input id='link_text_hover_color' name='jsm_custom_login_options[link_text_hover_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /><span class='input-group-addon'><i></i></span></div>";
-		$output .= "<br /><span class='description'>6 digit hex color code</span>";
+		$output = "<div class='input-group color-picker'><span class='input-group-addon'><i></i></span><input id='link_text_hover_color' name='jsm_custom_login_options[link_text_hover_color]' type='text' value='" . esc_attr( $text_string ). "' class='form-control' /></div>";
+		$output .= "<span class='description'>6 digit hex color code</span>";
 		echo $output;
 	}
 

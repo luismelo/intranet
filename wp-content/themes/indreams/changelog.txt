@@ -1,4 +1,0 @@
-== Changelog ==
-
-= Version 1.0 =
-  InDreams Theme is created on 17-09-2014.
